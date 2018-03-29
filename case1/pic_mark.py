@@ -2,19 +2,32 @@
 # -*- coding: utf-8 -*-
 
 from PIL import Image
-from PIL import PSDraw
-origin_name = 'origin.jpg'
-modified_name = 'modified.jpg'
-text = '7'
-box = (1 * 72, 2 * 72, 7 * 72, 10 * 72)
-img = Image.open(origin_name)
-width, height = img.size
-fillColor = "#ff0000"
-ps = PSDraw.PSDraw(img)
-ps.begin_document(text)
-ps.image(box, img, 75)
-ps.rectangle(box)
-ps.setfont("HelveticaNarrow-Bold", 36)
-ps.text((3 * 72, 4 * 72), text)
-ps.end_document()
-img.save(modified_name)
+from PIL import ImageDraw
+from PIL import ImageFont
+
+
+class PicMark(object):
+    def __init__(self, origin_name=None, mark='7'):
+        self.origin_name = origin_name
+        self.modified_name = 'modified_' + origin_name
+        self.mark = mark
+
+    def picmarkProcess(self):
+        image = Image.open(self.origin_name)
+        draw = ImageDraw.Draw(image)
+        width, height = image.size
+        fontSize = int(width * 0.17)
+        # print('width: %s, height: %s, fontSize: %s.' % (width, height, fontSize))
+        fillColor = "#ff0000"
+        setFont = ImageFont.truetype('C:/Windows/Fonts/msyh.ttf', fontSize)
+        draw.text(
+            (0.8 * width, 0.1 * height),
+            self.mark,
+            font=setFont,
+            fill=fillColor)
+        image.save(self.modified_name)
+
+
+if __name__ == "__main__":
+    pp = PicMark('origin.jpg', )
+    pp.picmarkProcess()
