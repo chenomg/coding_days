@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-File: A + B.py
+File: AplusB.py
 Author: yourname
 Email: yourname@email.com
 Github: https://github.com/yourname
@@ -15,19 +15,21 @@ a和b都是 32位 整数么？
 当然可以
 """
 
-aa = 21
-bb = 12
-
 
 def aplusb(a, b):
     c = a ^ b
-    d = a & b
-    e = c ^ (d << 1)
-    f = c & (d << 1)
-    if f == 0:
+    d = (a & b) << 1
+    if d == 0:
         return c
-    return aplusb(e, f)
+    return aplusb(c, d)
 
 
-result = aplusb(aa, bb)
-print(result)
+def main():
+    a_int = 121
+    b_int = 82
+    result_value = aplusb(a_int, b_int)
+    print(result_value)
+
+
+if __name__ == "__main__":
+    main()
