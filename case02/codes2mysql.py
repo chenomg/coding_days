@@ -49,7 +49,7 @@ class MySQL_Process(object):
 
 if __name__ == "__main__":
     addr = 'localhost'
-    user = 'chenomg'
+    user = 'root'
     password = '7777'
     db_name = 'test'
     table = 'ACTIVATION_CODES'

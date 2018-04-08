@@ -7,7 +7,7 @@ from PIL import ImageFont
 
 
 class PicMark(object):
-    def __init__(self, origin_name=None, mark='7'):
+    def __init__(self, origin_name=None, mark='1'):
         self.origin_name = origin_name
         self.modified_name = 'modified_' + origin_name
         self.mark = mark
@@ -19,7 +19,10 @@ class PicMark(object):
         fontSize = int(width * 0.17)
         # print('width: %s, height: %s, fontSize: %s.' % (width, height, fontSize))
         fillColor = "#ff0000"
-        setFont = ImageFont.truetype('C:/Windows/Fonts/msyh.ttf', fontSize)
+        # # Windows 字体
+        # setFont = ImageFont.truetype('C:/Windows/Fonts/msyh.ttf', fontSize)
+        # Mac 字体
+        setFont = ImageFont.truetype('/Library/Fonts/Microsoft Sans Serif.ttf', fontSize)
         draw.text(
             (0.8 * width, 0.1 * height),
             self.mark,
