@@ -16,7 +16,11 @@ class Words_Calculate(object):
         """
         with open(file_name, 'r') as f:
             f_read = f.read()
-            words_count_list = re.split(r'\W+', f_read)
+            words_count_list_provious = re.split(r"[\s\n\t\.]+", f_read)
+            words_count_list = [
+                word for word in words_count_list_provious
+                if re.match(r'^[a-zA-Z]+', word)
+            ]
         return len(words_count_list)
 
 
