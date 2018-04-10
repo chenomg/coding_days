@@ -1,4 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import re
+import codecs
 
 
 class Words_Calculate(object):
@@ -17,7 +21,7 @@ class Words_Calculate(object):
         """
         if file_name:
             self.file_name = file_name
-        with open(self.file_name, 'r') as f:
+        with open(self.file_name, 'r', encoding='utf-8') as f:
             f_read = f.read()
         return f_read
 
@@ -29,12 +33,12 @@ class Words_Calculate(object):
                 count_number: type: string, the number of words in the file
                 word_list: type: list, words appears in the string
         """
-        words_count_list_provious = re.split(r"[\s\n\t\.\,\“\?\"\…]+", string)
+        words_count_list_provious = re.split(r"[\s\n\t\.\,\“\?\"\…\:\”]+", string)
         words_count_list = [
-            word for word in words_count_list_provious
+            word.lower() for word in words_count_list_provious
             if re.match(r'^[a-zA-Z]+', word)
         ]
-        return len(words_count_list),words_count_list
+        return len(words_count_list), words_count_list
 
     def word_and_number(self, string_2_count=None):
         """TODO: calculate all words and their appeared number
@@ -67,7 +71,7 @@ def main():
     words_count_dic = test.word_and_number(str_from_file)
     print(words_count)
     print(words_count_dic)
-    with open('words_count_dic.txt','a') as f:
+    with open('words_count_dic.txt','w') as f:
         for key in words_count_dic.keys():
             f.write('{}: {}\n'.format(key, words_count_dic[key]))
 
