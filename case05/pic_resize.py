@@ -9,6 +9,7 @@ Description: 第 0005 题： 你有一个目录，装了很多照片，把它们
 """
 
 from PIL import Image
+from math import floor
 import os
 import re
 
@@ -27,26 +28,32 @@ def image_path_list(path):
     return image_path_list
 
 
-def image_zoomout(image, max_width, max_height):
-    path = re.findall(r'^\/.+\/', image)
+def image_zoomout_save(image, max_width=1136, max_height=640):
+    p = re.compile(r'^\/.+\/')
+    path = p.findall(image)
     file_name = re.findall(r'\w+\.\w+$', image)
-    new_name = 'thumbnail-' + file_name
-    output_file = os.path.join(path, new_name)
+    new_name = 'thumbnail-' + file_name[0]
+    output_file = os.path.join(path[0], new_name)
     img = Image.open(image)
     width, height = img.size
-    if width > 1136 or height > 640:
-        if width / height > 1136 / 640:
-            rate = width / 1136
-            img.thumbnail(width / rate, height / rate)
-            img.save(new_name, 'jpeg')
+    if width > max_width or height > max_height:
+        if width / height > max_width / max_height:
+            rate = width / max_width
+            img.thumbnail((floor(width / rate), floor(height / rate)))
+            img.save(output_file, 'jpeg')
+            print("Process done")
         else:
-            rate = height / 640
-            img.thumbnail(width / rate, height / rate)
-            img.save(new_name, 'jpeg')
+            rate = height / max_height
+            img.thumbnail((floor(width / rate), floor(height / rate)))
+            img.save(output_file, 'jpeg')
+            print("Process done")
+    else:
+        print("Picture doesn't need to zoomout")
 
 
 def main():
     addr = '/Users/chenomg/code/coding_days/case05/pic/'
+    # img_addr = '/Users/chenomg/code/coding_days/case05/pic/banner.jpg'
     image_files = []
     # files = file_list(addr)
     image_files = image_path_list(addr)
@@ -56,6 +63,9 @@ def main():
     path = re.findall(r'^\/.+\/', image_files[0])
     print(image_files[0])
     print(path)
+    # print(lambda  for f in image_files[0])
+    print(f for f in image_files[0])
+    image_zoomout_save(image_files[5])
 
 
 if __name__ == "__main__":
