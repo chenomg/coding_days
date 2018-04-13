@@ -71,8 +71,10 @@ class pic_resize(object):
         """
         self.complete_image_path_name_list_and_names_list()
         for image in self.image_path_name_list:
-            # p = re.compile(r'^\/.+\/')
-            p = re.compile(r'.+\\')
+            if re.findall(r'^windows.*', pic_resize.Platform, re.I):
+                p = re.compile(r'.+\\')
+            else:
+                p = re.compile(r'^\/.+\/')
             path = p.findall(image)[0]
             path_length = len(path)
             file_name = image[path_length + 1:]
