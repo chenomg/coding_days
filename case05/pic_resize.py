@@ -9,6 +9,7 @@ Description: 第 0005 题： 你有一个目录，装了很多照片，把它们
 """
 
 from PIL import Image
+from platform import platform
 import os
 import re
 
@@ -27,6 +28,7 @@ class pic_resize(object):
     @raise e: Description
 
     """
+    Platform = platform()
 
     def __init__(
             self,
@@ -69,7 +71,8 @@ class pic_resize(object):
         """
         self.complete_image_path_name_list_and_names_list()
         for image in self.image_path_name_list:
-            p = re.compile(r'^\/.+\/')
+            # p = re.compile(r'^\/.+\/')
+            p = re.compile(r'.+\\')
             path = p.findall(image)[0]
             path_length = len(path)
             file_name = image[path_length + 1:]
