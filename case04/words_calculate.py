@@ -72,7 +72,8 @@ def main():
     print(words_count)
     print(words_count_dic)
     with open('words_count_dic.txt','w') as f:
-        for key in words_count_dic.keys():
+        # 按照单词首字母排序
+        for key in sorted(words_count_dic.keys()):
             f.write('{}: {}\n'.format(key, words_count_dic[key]))
 
 
