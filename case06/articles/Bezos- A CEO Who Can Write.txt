@@ -1,0 +1,69 @@
+Bezos: A CEO Who Can Write
+by Jean-Louis Gassée
+
+The more I read Jeff Bezos’ twenty-one annual letters to Amazon shareholders, the more I like his views on growing Amazon’s business, on focusing on constitutionally discontented customers. I also became convinced that letters give us a unique opportunity to see a genius explain his work.
+
+In his 2018 letter to Amazon shareholders, Jeff Bezos revealed, uncharacteristically, a key indicator of the company’s impressive achievements: Amazon Prime subscriptions have topped 100M. This was followed by glowing quarterly numbers that proclaimed $51B in revenue, more than 10% of which was garnered by Amazon Web Services (AWS), a genuinely amazing service that saw 49% year-to-year growth.
+
+But what’s the most impressive facet of this litany? It’s this: Jeff Bezos is the too-rare CEO who writes to his shareholders every year…
+
+Wait…what is that “too-rare” epithet supposed to mean? Don’t company CEOs duly and regularly pay their respects to company owners in the cover letters affixed to their annual reports? Ah, yes, they want us to think they do. But our gut knows better.
+
+Blame attorneys, PR consiglieri, or a weak-spined CEO for yielding to society’s offensive demand that we not offend anyone ever. Whatever the reason, when we listen to typical corpospeak there is no music, no soul, no human reaching out to us. There’s no such lack of soul in Amazon’s annual letters to shareholders. Founder & CEO Jeff Bezos rejoices, occasionally apologizes, and always expounds his company’s management philosophy and practices — and he does so with wit and good grace.
+
+In the very first shareholder letter, 1997, we get a taste of Bezo’s ability to draw us in and keep us reading:
+
+“We realized that the Web was, and still is, the World Wide Wait…But this is Day 1 for the Internet and, if we execute well, for amazon.com.”
+And in the following early years:
+
+“At a recent event at the Stanford University campus, a young woman came to the microphone and asked me a great question: “‘I have 100 shares of Amazon.com. What do I own?’” [1998]
+“…if the company is better positioned today than it was a year ago, why is the stock price so much lower than it was a year ago? As the famed investor Benjamin Graham said, ‘In the short term, the stock market is a voting machine; in the long term, it’s a weighing machine.’’’ [2000]
+“Our Apparel and Accessories store has more than 500 top clothing brands, and in its first 60 days, customers bought 153,000 shirts, 106,000 pairs of pants, and 31,000 pairs of underwear.” [2002…underwear?]
+“I know of a couple who rented out their house, and the family who moved in nailed their Christmas tree to the hardwood floors instead of using a tree stand. Expedient, I suppose, and admittedly these were particularly bad tenants, but no owner would be so short-sighted.” [2003, on the difference between long-term and short-term thinking]
+While the annual letters always “take care of business”, you can see Bezos growing more confident as he breaks from the traditional form. He devoted the 2004 letter to a hypothetical “people transport machine” company as an illustration of why Amazon is obsessed with free cash flow per share rather than the usual corporate fascination with earnings and profit. (Now that Amazon is solidly in the black, let’s recall how long critics berated Bezos for running a no-future money-losing company.)
+
+In 2010, he penned a tribute to Amazon’s engineers by explaining, and not just in layman’s terms, what they do. The tone was just right, neither disingenuously geeky nor overtly tongue-in-cheek:
+
+“The diversity of products demands that we employ modern regression techniques like trained random forests of decision trees to flexibly incorporate thousands of product attributes at rank time….Now, if the eyes of some shareowners dutifully reading this letter are by this point glazing over, I will awaken you by pointing out that, in my opinion, these techniques are not idly pursued — they lead directly to free cash flow.”
+
+What he was doing, although we may not have fully appreciated it at the time, was giving a brief tour of AWS, arguably Amazon’s most important technology.
+
+2011 was an epistolary bagatelle: A series of testimonials from happy partners, both corporate and cottage:
+
+“Past age 60 and in the midst of the recession, my wife and I found our income options severely limited. KDP [Kindle Direct Publishing] was my one shot at a lifelong dream — our only chance at financial salvation. Within months of publishing, KDP has completely changed our lives, enabling this aging nonfiction writer to launch a brand-new career as a best-selling novelist.”
+
+In 2016, Brother Bezos delivers a homily:
+
+“Jeff, what does Day 2 look like?”
+
+That’s a question I just got at our most recent all-hands meeting. I’ve been reminding people that it’s Day 1 for a couple of decades. I work in an Amazon building named Day 1, and when I moved buildings, I took the name with me. I spend time thinking about this topic.
+
+“Day 2 is stasis. Followed by irrelevance. Followed by excruciating, painful decline. Followed by death. And that is why it is always Day 1.”
+
+With this year’s letter, Bezos is back at the pulpit (he often refers to himself and his troops as “missionaries”), as he forcefully dismisses PowerPoint in favor of written memos:
+
+“We don’t do PowerPoint (or any other slide-oriented) presentations at Amazon. Instead, we write narratively structured six-page memos. We silently read one at the beginning of each meeting in a kind of “study hall.” Not surprisingly, the quality of these memos varies widely. Some have the clarity of angels singing. They are brilliant and thoughtful and set up the meeting for high-quality discussion. Sometimes they come in at the other end of the spectrum.”
+
+I have mixed feelings about PowerPoint. There’s no denying its large-scale use, its acceptance as a kind of lingua franca, a créole used by organizations large and small to share ideas, plans, news good and bad. But it also encourages an indiscriminate disgorgement of poorly organized ideas that Bezos implicitly condemns when he refers to the difficult process of writing a solid memo [as always, edits and emphasis mine]:
+
+“ … they mistakenly believe a high-standards, six-page memo can be written in one or two days or even a few hours, when really it might take a week or more! […] The great memos are written and re-written, shared with colleagues who are asked to improve the work, set aside for a couple of days, and then edited again with a fresh mind. They simply can’t be done in a day or two.”
+
+At Amazon, Bezos practices what he preaches: He writes well, affirmatively, with grace (“angels singing”), and not infrequent humor. In this year’s letter he uses a metaphor — learning handstands — to better illustrate his philosophy and practice of high standards:
+
+“So, the four elements of high standards as we see it: they are teachable, they are domain specific, you must recognize them, and you must explicitly coach realistic scope. For us, these work at all levels of detail. Everything from writing memos to whole new, clean-sheet business initiatives. We hope they help you too.”
+
+Then Bezos proceeds to outline his company’s achievements, including a first-time disclosure of the number of Prime subscribers, breaking with a tradition of keeping indicators, such as the number of Kindle readers or Amazon Music downloads, close to his vest. (After the unusual disclosure, we should have seen the news coming: In the US, Prime yearly subscription price will now climb from $99 to $119.)
+
+After reading this year’s letter, I downloaded the entire collection of twenty-one epistles and devoured them. (I hope someone, somewhere has done a better job than Amazon’s site putting the compilation together in a consistent and directly accessible fashion…)
+
+More than a few thoughts emerged from the exercise, but the one that stands out is that the customer, the ultimate arbiter of success, must be held in awe. Bezos was a bit overly dramatic about it in 1998:
+
+I constantly remind our employees to be afraid, to wake up every morning terrified. Not of our competition, but of our customers. Our customers have made our business what it is, they are the ones with whom we have a relationship, and they are the ones to whom we owe a great obligation. And we consider them to be loyal to us — right up until the second that someone else offers them a better service
+
+By 2017, he had lightened up, but without losing the sense of the customers’ importance:
+
+One thing I love about customers is that they are divinely discontent. Their expectations are never static — they go up. It’s human nature. We didn’t ascend from our hunter-gatherer days by being satisfied. People have a voracious appetite for a better way, and yesterday’s ‘wow’ quickly becomes today’s ‘ordinary’.
+
+Bezos’ letters make splendid material for a Business School course on Strategy and Communication. (I’d love to teach it — if I were twenty years younger.) A caveat applies, however. Most of the strategies and practices advocated by Amazon’s founder have broad applicability, but a central mystery remains: Bezos himself, his combination of early life experience, intellect, emotional abilities and communication skills. Being Bezos isn’t teachable.
+
+— JLG@mondaynote.com
