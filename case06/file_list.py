@@ -17,7 +17,7 @@ import os
 import re
 
 
-def get_filename_list_and_text_path_list(
+def get_filename_and_path_dic(
         path=os.path.join(os.getcwd(), 'articles')):
     """
     生成需要进行统计的文件名清单和文件完整目录(带文件名)清单的字典
@@ -37,5 +37,5 @@ def get_filename_list_and_text_path_list(
 
 
 if __name__ == "__main__":
-    dic = get_filename_list_and_text_path_list()
+    dic = get_filename_and_path_dic()
     print(dic)

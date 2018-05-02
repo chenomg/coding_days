@@ -12,7 +12,7 @@
 #       History:
 # =============================================================================
 '''
-from file_list import get_filename_list_and_text_path_list
+from file_list import get_filename_and_path_dic
 import sys
 sys.path.append('..')
 from case04.words_calculate import Words_Calculate
@@ -26,7 +26,7 @@ def main():
     3. 获取每个文章中使用量前五名的单词
     """
     # 1st step
-    file_list_dic = get_filename_list_and_text_path_list()
+    file_list_dic = get_filename_and_path_dic()
     My_Words_Calculate = Words_Calculate()
     # 每篇文章用量前五的单词
     article_5words_dic = {}
