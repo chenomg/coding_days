@@ -21,7 +21,8 @@ class Words_Calculate(object):
         """
         if file_name:
             self.file_name = file_name
-        with open(self.file_name, 'r', encoding='utf-8') as f:
+        # 遇到无法decode的字符则忽略
+        with open(self.file_name, 'r', encoding='utf-8', errors='ignore') as f:
             f_read = f.read()
         return f_read
 
