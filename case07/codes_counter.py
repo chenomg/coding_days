@@ -41,41 +41,59 @@ class Codes_Counter(object):
         lines = 0
         blanklines = 0
         commentlines = 0
-        comments_flag = 0
+        comments_flag = False
+        i = 0
         with open(file_path) as f:
             for line in iter(f.readline, ''):
                 lines += 1
                 if re.findall(r'^\s*$', line):
+                    # 若全部为空格则空格行数+1
                     blanklines += 1
-                elif re.findall(r'(\'\'\'|\"\"\")', line):
-                    if not comments_flag:
-                        comments_flag = 1
-                    else:
-                        comments_flag = 0
-                        commentlines += 1
-                    # print(line)
-                    # print(re.findall(r'^\s*(\'\'\'|\"\"\")', line))
-                elif comments_flag:
+                if re.findall(r'^\s*\#', line):
+                    # 若以#开头
                     commentlines += 1
-                    # print(line)
-                elif not comments_flag:
-                    if re.findall(r'^\s*#', line):
+                if re.findall(r"^\s*(\'\'\'|\"\"\")", line):
+                    # 若以'''或"""开头或结束
+                    if not comments_flag:
+                        comments_flag = True
+                    else:
+                        comments_flag = False
                         commentlines += 1
+                if comments_flag:
+                    commentlines += 1
+                    i += 1
+                    # print('""content"" found {}'.format(i))
+                    # print(line)
+                if comments_flag and re.findall(r'^\s*\#', line):
+                    commentlines -= 1
         return lines, blanklines, commentlines
 
 
 if __name__ == "__main__":
+    totle_lines = 0
+    total_blanklines = 0
+    total_commentlines = 0
     My_Codes = Codes_Counter()
     # 获取当前目录的父目录
     parent_path = os.path.abspath(
         os.path.join(os.path.dirname('__file__'), os.path.pardir))
-    # 执行获取当前目录下的所有py文件
-    My_Codes.get_filename_and_path_dic(parent_path)
-    print(parent_path)
-    print(My_Codes.file_dic)
+    my_codes_path = os.path.abspath(
+        os.path.join(parent_path, os.path.pardir)
+    )
+    # 执行获取父目录下的所有py文件
+    My_Codes.get_filename_and_path_dic(my_codes_path)
+    # 仅测试当前目录
+    # My_Codes.get_filename_and_path_dic(os.getcwd())
     for i in My_Codes.file_dic:
         counters = My_Codes.file_codes_counter(My_Codes.file_dic[i])
         # print(i + '\tpath: ' + My_Codes.file_dic[i] + '\n' +
-              # str(My_Codes.lines) + '\t' + str(My_Codes.blanklines) + '\t' +
-              # str(My_Codes.commentlines))
-        print("{} \t path: {}\nlines: {}\tblanklines: {}\tcommentlines: {}\n".format(i, My_Codes.file_dic[i], counters[0], counters[1], counters[2]))
+        # str(My_Codes.lines) + '\t' + str(My_Codes.blanklines) + '\t' +
+        # str(My_Codes.commentlines))
+        print("{} \t path: {}\nlines: {}\tblanklines: {}\tcommentlines: {}\n".
+              format(i, My_Codes.file_dic[i], counters[0], counters[1],
+                     counters[2]))
+        totle_lines += counters[0]
+        total_blanklines += counters[1]
+        total_commentlines += counters[2]
+    print("Total: \nLines: {}\tBlanklines: {}\tCommentlines: {}\n".format(
+        totle_lines, total_blanklines, total_commentlines))
