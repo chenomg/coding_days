@@ -14,9 +14,12 @@
 '''
 import requests
 from lxml import html
+import os
 
 # 获取网页文章正文的内容保存文件
-file_name = '/Users/chenomg/code/My_codes/coding_days/case08/crawl.txt'
+
+# 设定保存结果的文件名
+file_name = os.path.join(os.getcwd(), 'crawl.txt')
 headers = {
     'user-agent':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36'
