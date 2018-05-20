@@ -16,6 +16,8 @@
 from PIL import Image, ImageFont, ImageDraw, ImageFilter
 import random
 import os
+import re
+import platform
 
 
 class Captcha(object):
@@ -32,7 +34,13 @@ class Captcha(object):
 
     def __init__(self, size=(240, 60), fontsize=45):
         # 设置文本字体
-        self.font = ImageFont.truetype('/Library/Fonts/Arial.ttf', fontsize)
+        Platform = platform.platform()
+        if re.findall(r'^Darwin', Platform):
+            self.font = ImageFont.truetype('/Library/Fonts/Arial.ttf', fontsize)
+        elif re.findall(r'^Linux', Platform):
+            self.font = ImageFont.truetype('/usr/share/Fonts/truetype/dejavu/DejaVuSans.ttf', fontsize)
+        elif re.findall(r'^Windows', Platform):
+            self.font = ImageFont.truetype('c:\\Windows\\Fonts\\Arial.ttf', fontsize)
         # 验证码图片大小
         self.size = size
         # 生成空白的新图片
