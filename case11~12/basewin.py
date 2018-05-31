@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 
 ###########################################################################
@@ -12,10 +11,10 @@ import wx
 import wx.xrc
 
 ###########################################################################
-## Class MyFrame1
+## Class baseMainWindow
 ###########################################################################
 
-class MyFrame1 ( wx.Frame ):
+class baseMainWindow ( wx.Frame ):
 
 	def __init__( self, parent ):
 		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
@@ -25,7 +24,7 @@ class MyFrame1 ( wx.Frame ):
 
 		bSizer1 = wx.BoxSizer( wx.VERTICAL )
 
-		self.output_textCtrl = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 500,200 ), wx.TE_MULTILINE )
+		self.output_textCtrl = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 500,200 ), wx.TE_MULTILINE|wx.TE_READONLY )
 		bSizer1.Add( self.output_textCtrl, 0, wx.ALL, 5 )
 
 		fgSizer1 = wx.FlexGridSizer( 0, 2, 0, 0 )
@@ -47,7 +46,15 @@ class MyFrame1 ( wx.Frame ):
 
 		self.Centre( wx.BOTH )
 
+		# Connect Events
+		self.submit_button.Bind( wx.EVT_BUTTON, self.submit )
+
 	def __del__( self ):
 		pass
+
+
+	# Virtual event handlers, overide them in your derived class
+	def submit( self, event ):
+		event.Skip()
 
 
